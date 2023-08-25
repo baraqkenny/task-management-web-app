@@ -1,0 +1,90 @@
+.sign-up-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.sign-up{
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.sign-up-form{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(207, 201, 201);
+    padding: 2rem 2rem;
+    border-radius: 5px;
+    width: 60%;
+}
+
+.sign-up-form h1{
+  text-align: center;
+}
+
+.sign-up-name-label{
+    margin-top: 2rem; 
+}
+
+.sign-up-name-input{
+    margin-top: 10px;
+    padding: 15px 50px;
+    border: 1px solid rgb(165, 162, 162);
+    border-radius: 5px;
+}
+
+.sign-up-email-label{
+    margin-top: 1rem;
+}
+
+.sign-up-email-input{
+    margin-top: 10px;
+    padding: 15px 50px;
+    border: 1px solid rgb(165, 162, 162);
+    border-radius: 5px;
+}
+
+.sign-up-password-label{
+    padding-top: 1rem;
+}
+
+.sign-up-password-input{
+    margin-top: 10px;
+    padding: 15px 50px;
+    border: 1px solid rgb(165, 162, 162);
+    border-radius: 5px;
+}
+
+.sign-up-btn{
+    margin-top: 30px;
+    padding: 15px 0;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    background: rgb(10, 110, 240);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-text{
+    padding-top: 1rem;
+}
+
+.link-to-login{
+  text-decoration: none;
+  color: blue;
+}
+
+.link-to-login:hover{
+  text-decoration: underline;
+}
+
+.side-background{
+  width: 50%;
+  height: 100vh;
+  background-color: green;
+}
