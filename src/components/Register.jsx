@@ -1,27 +1,45 @@
-import { useState } from 'react';
+import {  useState } from 'react';
 import { Link } from 'react-router-dom';
+// import { auth } from "../firebase";
+// import { createUserWithEmailAndPassword } from "../firebase/auth";
+// import { getFirestore, addDoc, collection } from "../firebase/firestore"
 import './Register.css';
 
+
 function Register() {
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [name, setName] = useState("");
+  // const [error, setError] = useState('Not valid')
+ 
 
-  const handleSubmit = (e) => {
+
+ 
+
+  const handleLoginSubmit = async (e) => {
     e.preventDefault();
+
+    if(!name === "" && !email === "" && !password === ""){
+      // Create a new user with email and password using firebase
+ 
+  }
+    setName("");
+    setEmail("");
+    setPassword("");
+    
   }
 
   return (
     <div className="sign-up-container">
       <div className="sign-up">
-        <form className="sign-up-form">
+        <form className="sign-up-form" onSubmit={handleLoginSubmit}>
           <h1>Sign Up</h1>
           <label htmlFor="name" className="sign-up-name-label">
             Full Name
           </label>
           <input
+          value={name}
             type="text"
-            value={name}
             placeholder="full name"
             onChange={(e) => setName(e.target.value)}
             name="name"
@@ -46,7 +64,7 @@ function Register() {
             Password
           </label>
           <input
-            value={password}
+          value={password}
             onChange={(e) => setPassword(e.target.value)}
             type="password"
             placeholder="********"
@@ -54,11 +72,14 @@ function Register() {
             name="password"
             className="sign-up-password-input"
           />
-          <button className='sign-up-btn' type="submit" onClick={handleSubmit}>
+          <button className="sign-up-btn" type="submit">
             Register
           </button>
-          <p className='login-text'>
-            Already have an account? <Link className='link-to-login' to="/">Login</Link>
+          <p className="login-text">
+            Already have an account?{" "}
+            <Link className="link-to-login" to="/">
+              Login
+            </Link>
           </p>
         </form>
       </div>

@@ -1,0 +1,49 @@
+.side-nav-container{
+    width: 20%;
+    height: 100vh;
+    background-color: #f8f8f8;
+    border-right: 2px solid;    
+    
+}
+
+.user-image{
+    text-align: center;
+    justify-content: center;
+    padding-top: 2rem;
+}
+.user-image img{
+    width: 100px;
+    border-radius: 50%;
+    background: green;
+    padding-top: 1rem;
+}
+
+.side-nav-icon{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 6rem;
+}
+
+.dashboard-icon{
+    display: flex;
+    padding: 10px 80px;
+    cursor: pointer;
+    transition: .5s;
+    border-radius: 5px;
+}
+.dashboard-icon:hover {
+    background-color: rgb(118, 188, 245);
+}
+.project-icon{
+    display: flex;
+    margin-top: 2rem;
+    cursor: pointer;
+    padding: 10px 80px;
+    transition: .5s ;
+    border-radius: 5px;
+}
+
+.project-icon:hover {
+     background-color: rgb(118, 188, 245);
+}

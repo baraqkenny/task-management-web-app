@@ -1,19 +1,32 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+// import { signInWithEmailAndPassword } from "firebase/auth";
+import { Link} from "react-router-dom";
 import './Login.css';
 
+
+
 function Login() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+
+const [email, setEmail] = useState("");
+const [password, setPassword] = useState("");  
 
   // Log in on button click
-  const handleSubmit = (e) => {
-    e.preventDefault()
+  const handleRegisterSubmit = async (e) => {
+    e.preventDefault();
+
+    // if(!email === "" && !password === ""){
+    
+    //      }
+       
+
+    
+  
+    
   }
   return (
     <div className="login-container">
       <div className="login">
-        <form className="login-form">
+        <form className="login-form" onSubmit={handleRegisterSubmit}>
           <h1>Log In</h1>
           <label htmlFor="email" className="login-email-label">
             Email
@@ -26,6 +39,7 @@ function Login() {
             id="email"
             name="email"
             className="login-email-input"
+            required
           />
 
           <label className="login-password-label" htmlFor="password">
@@ -37,14 +51,19 @@ function Login() {
             type="password"
             placeholder="********"
             id="password"
-            name="password"
             className="login-password-input"
+            required
           />
 
-          <button className="login-btn" type="submit" onClick={handleSubmit}>
+          <button className="login-btn" type="submit">
             Log In
           </button>
-          <p className='register'>Don't have an account? <Link className='link-to-register' to="/register">Register</Link></p>
+          <p className="register">
+            Don't have an account?{" "}
+            <Link className="link-to-register" to="/register">
+              Register
+            </Link>
+          </p>
         </form>
       </div>
 
@@ -52,5 +71,7 @@ function Login() {
     </div>
   );
 }
+
+
 
 export default Login
